@@ -47,6 +47,11 @@ const REGISTER_CSS = `
 .app-shell[data-registers="true"] tr.${REGISTER_MARK} td:first-child {
   box-shadow: inset 4px 0 0 #dc2626;
 }
+/* Other pages: hovering a row must not turn it pink. */
+.app-shell:not([data-registers="true"]) main.page table tbody tr:hover td {
+  background: #f1f5f9 !important;
+  color: inherit !important;
+}
 `;
 
 /** Only the Registers page itself (e.g. /sale/registers), never /people/users. */
